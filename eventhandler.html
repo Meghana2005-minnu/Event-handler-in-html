@@ -11,6 +11,10 @@
    <input type="text" id="in" placeholder="type something">
    <p id="output"></p>
    <p id="res"></p>
+
+   <div id="div" style="background-color: aqua;">Mouse Hover</div>
+     
+   <button onclick="window.print()">Print the page </button>
    <script>
       let btn1 = document.getElementById("btn1");
       let input = document.querySelector("#in");
@@ -22,6 +26,27 @@
       }
       document.getElementById("res").innerText="hello";
       document.getElementById("res").innerHTML="<h1>hello</h1>";
+
+      input.onkeyup=function(){
+        alert("Key Released" + input.value)
+
+      }
+
+      input.onkeydown=function(){
+        alert("Key Pressed" + input.value)
+        
+      }
+
+      let div= document.getElementById("div");
+      div.onmouseover=function(){
+        alert("Mouse Hovered");
+      }
+
+      //window.onload=function(){
+    // alert("Page Loaded");
+      //}
+      
+
 
 
         btn1.onclick = function() {
