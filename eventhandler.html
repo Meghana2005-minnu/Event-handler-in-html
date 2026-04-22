@@ -10,16 +10,24 @@
    <button id="btn1">Click Me</button>
    <input type="text" id="in" placeholder="type something">
    <p id="output"></p>
+   <p id="res"></p>
    <script>
       let btn1 = document.getElementById("btn1");
       let input = document.querySelector("#in");
+
+      let i=0;
       input.oninput=function(){
+        console.log(`oninput called ${i++}`);
         document.getElementById("output").innerHTML="U have typed something:"+input.value;
       }
+      document.getElementById("in").innerText="hello";
+      document.getElementById("in").innerHTML="<h1>hello</h1>";
+
 
         btn1.onclick = function() {
              alert("Button Clicked");
         }
+
 
    </script> 
 </body>
